@@ -1360,10 +1360,14 @@ var start = function(targetDuration, baseMultiplier, pauseMultiplier, cumFactor,
 			showProgressAndGoOn(randomMessage[1] * 1000 * multiplier, goOn, 'jerkbar');
 		} else {
 			var ourMessages = messages['finish'];
-			var randomMessage = ourMessages[Math.floor(Math.random()*(ourMessages.length-1))+1];
+			var chosenNumberLiz = Math.floor(Math.random()*(ourMessages.length-1))+1;
+			console.log(chosenNumberLiz);
+			var randomMessage = ourMessages[chosenNumberLiz];
 			
 			// random "outcum"
-			if (Math.random() >= cumFactor) {
+			var randomChanceLiz = Math.random();
+			console.log(randomChanceLiz);
+			if (randomChanceLiz >= cumFactor) {
 				randomMessage = ourMessages[0]; // no cum message
 			}
 				
