@@ -1384,6 +1384,7 @@ var start = function(targetDuration, baseMultiplier, pauseMultiplier, cumFactor,
 				// cum allowed
 				showImage('finish');
 				$mw.removeClass('stop').addClass('finish');
+				updateFlash(randomMessage[3]);
 				showProgressAndGoOn(randomMessage[1] * 1000, end, 'cumbar');
 				if (typeof(gtag) != "undefined") {
 					gtag('event', 'end_reached', {
