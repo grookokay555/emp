@@ -1360,7 +1360,7 @@ var start = function(targetDuration, baseMultiplier, pauseMultiplier, cumFactor,
 			showProgressAndGoOn(randomMessage[1] * 1000 * multiplier, goOn, 'jerkbar');
 		} else {
 			var ourMessages = messages['finish'];
-			var randomMessage = ourMessages[Math.floor(Math.random()*ourMessages.length)];
+			var randomMessage = ourMessages[Math.floor(Math.random()*(ourMessages.length-1))+1];
 			
 			// random "outcum"
 			if (Math.random() >= cumFactor) {
